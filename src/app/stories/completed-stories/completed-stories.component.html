@@ -1,6 +1,7 @@
+<div class="container" style="border:1px solid #cecece;">
 <h1>Completed stories</h1>
-<button>Add story</button>
-<ul>
-  <li>Story 1</li>
-  <li>Story 2</li>
+<ul *ngFor="let story of stories">
+  {{story.storyId}}
+  {{story.storyDescription}}
 </ul>
+</div>

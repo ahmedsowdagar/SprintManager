@@ -1,5 +1,7 @@
+<div class="container" style="border:1px solid #cecece;">
 <h1>Stories in progress</h1>
-<ul>
-  <li>Story 3</li>
-  <li>Story 4</li>
+<ul *ngFor="let story of stories">
+  {{story.storyId}}
+  {{story.storyDescription}}
 </ul>
+</div>
