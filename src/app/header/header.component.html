@@ -4,7 +4,8 @@
       <a class="navbar-brand" href="#">Sprint status</a>
     </div>
   </div>
-  <ul class="nav navbar-nav">
+  <ul class="nav navbar-nav"[(ngModel)]="sprint">
+    <li><a href="#">Sprint number:{{sprint.sprintNumber}}</a></li>
     <li><a href="#">Sprint start date:</a></li>
     <li><a href="#">Sprint End date:</a></li>
     <li><a href="#">UAT start date:</a></li>

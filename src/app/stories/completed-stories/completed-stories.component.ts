@@ -17,9 +17,6 @@ export class CompletedStoriesComponent implements OnInit {
   }
 
   AddStory() {
-    alert('hi');
-    this.stories.push(new Story( 'story9' , 'story3 - description' , new Date(201, 12, 31) , new Date(201, 12, 31)));
-    this.title = 'hi';
+    this.stories.push(new Story( 'story39' , 'story3 - description' , new Date(201, 12, 31) , new Date(201, 12, 31)));
   }
-
 }

@@ -10,6 +10,7 @@ import { ResourcesComponent } from './resources/resources.component';
 import { ProgressGraphComponent } from './progress-graph/progress-graph.component';
 import { StoryComponent } from './story/story.component';
 import { FormsModule } from '@angular/forms';
+import { NewStoryComponent } from './new-story/new-story.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     InProgressStoriesComponent,
     ResourcesComponent,
     ProgressGraphComponent,
-    StoryComponent
+    StoryComponent,
+    NewStoryComponent
   ],
   imports: [
     BrowserModule,
