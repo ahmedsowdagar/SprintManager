@@ -9,6 +9,7 @@ import { InProgressStoriesComponent } from './stories/in-progress-stories/in-pro
 import { ResourcesComponent } from './resources/resources.component';
 import { ProgressGraphComponent } from './progress-graph/progress-graph.component';
 import { StoryComponent } from './story/story.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { StoryComponent } from './story/story.component';
     StoryComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
