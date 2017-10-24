@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Story } from '../../../story.model';
 
 @Component({
@@ -7,16 +7,36 @@ import { Story } from '../../../story.model';
   styleUrls: ['./completed-stories.component.css']
 })
 export class CompletedStoriesComponent implements OnInit {
-  stories: Story[] = [ new Story( 'story1' , 'story1 - description' , new Date(201, 12, 31) , new Date(201, 12, 31) ),
-                        new Story( 'story2' , 'story2 - description' , new Date(201, 12, 31) , new Date(201, 12, 31) ),
-                        new Story( 'story3' , 'story3 - description' , new Date(201, 12, 31) , new Date(201, 12, 31) ) ];
-  title = 'start';
+   @Input() completed: Story;
+     public labels = ['Planned', 'Actual'];
+     public data = [
+        ['10'],
+        ['20']
+      ];
+  public options = {
+          scales: {
+              xAxes: [{
+                  stacked: true
+              }],
+              yAxes: [{
+                  stacked: true
+              }]
+          },
+          legend: {
+              display: true,
+              labels: {
+                  fontColor: 'rgb(255, 99, 132)'
+              }
+          },
+          title: {
+              display: false,
+          }
+
+          // Chart.js options can go here.
+      };
   constructor() { }
 
   ngOnInit() {
   }
 
-  AddStory() {
-    this.stories.push(new Story( 'story39' , 'story3 - description' , new Date(201, 12, 31) , new Date(201, 12, 31)));
-  }
 }

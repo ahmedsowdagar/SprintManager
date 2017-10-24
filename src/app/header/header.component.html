@@ -4,16 +4,16 @@
       <a class="navbar-brand" href="#">Sprint status</a>
     </div>
   </div>
-  <ul class="nav navbar-nav"[(ngModel)]="sprint">
-    <li><a href="#">Sprint number:{{sprint.sprintNumber}}</a></li>
-    <li><a href="#">Sprint start date:</a></li>
-    <li><a href="#">Sprint End date:</a></li>
-    <li><a href="#">UAT start date:</a></li>
-    <li><a href="#">UAT end date:</a></li>
-    <li><a href="#">Prod deployment date:</a></li>
-    <li><a href="#">Number of Stories:</a></li>
-    <li><a href="#">Number of Story points:</a></li>
-    <li><a href="#">Completed Story points:</a></li>
-    <li><a href="#">Pending Story points:</a></li>
+  <ul class="nav navbar-nav">
+    <li><a href="#">Sprint number:<b>{{sprint84.sprintNo}}</b></a></li>
+    <li><a href="#">Sprint start date:<b>{{sprint84.sprintStartDate | date}}</b></a></li>
+    <li><a href="#">Sprint End date:<b>{{sprint84.sprintEndDate | date}}</b></a></li>
+    <li><a href="#">UAT start date:<b>{{sprint84.sprintUatStartDate | date}}</b></a></li>
+    <li><a href="#">UAT end date:<b>{{sprint84.sprintUatEndDate | date}}</b></a></li>
+    <li><a href="#">Prod deployment date:<b>{{sprint84.sprintNo}}</b></a></li>
+    <li><a href="#">Number of Stories:<b>{{sprint84.sprintNo}}</b></a></li>
+    <li><a href="#">Number of Story points:<b>{{sprint84.sprintNo}}</b></a></li>
+    <li><a href="#">Completed Story points:<b>{{sprint84.sprintNo}}</b></a></li>
+    <li><a href="#">Pending Story points:<b>{{sprint84.sprintNumberOfStoryPoints}}</b></a></li>
   </ul>
 </nav>

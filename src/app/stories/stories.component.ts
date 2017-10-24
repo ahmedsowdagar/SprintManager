@@ -7,9 +7,13 @@ import { Story } from '../../story.model';
   styleUrls: ['./stories.component.css']
 })
 export class StoriesComponent implements OnInit {
-  // stories: Story[] = [ new Story( 'story1' , 'story5' , 'story5' , 'story5' ),
-  //                       new Story( 'story2' , 'story6' , 'story6' , 'story6' ),
-  //                       new Story( 'story3' , 'story7' , 'story7' , 'story7' ) ];
+  sprintStories: Story[] = [ new Story( 'story1' , 'story5' , new Date( 2017,  12, 31) , new Date(2017, 12, 31) ),
+                        new Story( 'story2' , 'story6' , new Date( 2017,  12, 31) , new Date(2017, 12, 31)),
+                        new Story( 'story3' , 'story7' , new Date( 2017,  12, 31) , new Date(2017, 12, 31) ) ];
+  newStoryId: string;
+  newStoryDescription: string;
+  newStoryStartDate: Date;
+  newStoryEndDate: Date;
 
   constructor() { }
 
@@ -17,6 +21,18 @@ export class StoriesComponent implements OnInit {
   }
 
   AddStory() {
+    this.sprintStories.push(new Story( this.newStoryId , this.newStoryDescription , this.newStoryStartDate , this.newStoryEndDate));
   }
 
+  ClearStory() {
+    alert('button clicked');
+  }
+
+  OnSubmit() {
+    alert('form submitted');
+  }
+
+  IsStoryCompleted(sprintStory) {
+    return true;
+  }
 }

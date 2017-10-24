@@ -1,14 +1,22 @@
 <app-header></app-header>
+<div>
+    <ul class="nav nav-tabs">
+        <li class="active"><a [routerLink]="['stories']">Stories</a></li>
+        <li><a [routerLink]="['resources']">Resources</a></li>
+    </ul>
+</div>
 <div class="row">
     <div class="col-md-8">
         <div class="container" style="border:1px solid red;">
-            <app-stories></app-stories>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="container" style="border:1px solid yellow;">
-            <app-resources></app-resources>
+            <!-- <app-stories></app-stories> -->
+            <router-outlet></router-outlet>
         </div>
     </div>
     
+    <!-- <div class="col-md-4">
+        <div class="container" style="border:1px solid yellow;">
+            <app-resources> </app-resources>
+        </div>
+    </div> -->
+   
 </div>

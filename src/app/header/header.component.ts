@@ -7,8 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  sprint = new Sprint(84, 84, null, null, null, null, null, 60);
-  constructor() { }
+  sprint84 = null;
+  constructor() {
+    this.sprint84 = new Sprint(84,
+                                84,
+                                new Date(2017, 9, 18),
+                                new Date(2017, 9, 18),
+                                new Date(2017, 9, 18),
+                                new Date(2017, 9, 18),
+                                19,
+                                60);
+   }
 
   ngOnInit() {
   }

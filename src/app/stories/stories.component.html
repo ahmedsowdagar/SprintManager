@@ -1,14 +1,44 @@
-
+<div></div>
+<!-- <div class="container" style="border:1px solid #AD0D0D;">
+            <a href="#">Add story here</a>
+            <input type="text" value="Id" [(ngModel)] = "newStoryId">
+            <input type="text" value="Description" [(ngModel)] = "newStoryDescription">
+            <input type="text" value="Start date" [(ngModel)]= "newStoryStartDate">
+            <div class="input-group date" data-provide="datepicker">
+                <input type="text" class="form-control">
+                <div class="input-group-addon">to be implemented
+                    <span class="glyphicon glyphicon-th"></span>
+                </div>
+            </div>
+            <input type="text" value="End date" [(ngModel)] = "newStoryEndDate">
+            <button class="btn btn-success" (click)=AddStory()>Add</button>
+            <button class="btn btn-success">Clear</button>
+            <button class="btn btn-success">Clear</button>
+        </div>
+         -->
 <div class="row">
     <div class="container">
-        <div class="col-md-12"> 
+        <div class="col-md-16"> 
             <app-new-story></app-new-story>
         </div>
     </div>
-    <div class="col-md-8"> 
-        <app-completed-stories></app-completed-stories>
+    <h1>Completed stories</h1>
+    <div class="col-md-16"> 
+            <table class="tbl tbl-striped">
+                
+            <div class="container" style="border:1px solid #cecece;">
+                        <div class="row">
+                                <th><div class="col-md-1 col-sm-1"><b>Id</b></div>
+                    <div class="col-md-2 col-sm-1"><b>Description</b></div>
+                    <div class="col-md-2 col-sm-1"><b>Start date</b></div>
+                    <div class="col-md-2 col-sm-1"><b>End date</b></div>
+                    <div class="col-md-3 col-sm-3"><b>Status graph</b></div>
+                </th>
+        <app-completed-stories *ngFor="let sprintStory of sprintStories" [completed]="sprintStory"></app-completed-stories>
+            </div>
+
     </div>
-    <div class="col-md-8">
+</table> <div class="col-md-8">
         <app-in-progress-stories></app-in-progress-stories>
     </div>
 </div>

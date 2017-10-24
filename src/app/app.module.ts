@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -11,6 +13,14 @@ import { ProgressGraphComponent } from './progress-graph/progress-graph.componen
 import { StoryComponent } from './story/story.component';
 import { FormsModule } from '@angular/forms';
 import { NewStoryComponent } from './new-story/new-story.component';
+import { ChartsModule } from 'ng2-charts/ng2-charts';
+import { SprintStatusComponent } from './sprint-status/sprint-status.component';
+
+const appRoutes: Routes = [
+  {path: 'resources', component: ResourcesComponent},
+  {path: 'stories', component: StoriesComponent}
+
+];
 
 @NgModule({
   declarations: [
@@ -22,11 +32,14 @@ import { NewStoryComponent } from './new-story/new-story.component';
     ResourcesComponent,
     ProgressGraphComponent,
     StoryComponent,
-    NewStoryComponent
+    NewStoryComponent,
+    SprintStatusComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ChartsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
